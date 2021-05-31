@@ -10,6 +10,8 @@
 		00DF36FE9B4AE45A12B9A586 /* Pods_SI_Converter_SI_ConverterUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5D9F68A27CCD8F0372469492 /* Pods_SI_Converter_SI_ConverterUITests.framework */; };
 		922A1BBC1AAA451471B19841 /* Pods_SI_ConverterTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C600186CDAE83C6F5F7167F7 /* Pods_SI_ConverterTests.framework */; };
 		B0523F9F0295991F147D2264 /* Pods_SI_Converter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 828B1527F7E09E0961CCAB4E /* Pods_SI_Converter.framework */; };
+		CC1021EB2664F7D7004560CA /* Time.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC1021EA2664F7D7004560CA /* Time.swift */; };
+		CC1021F02664F7EB004560CA /* TimeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC1021EF2664F7EB004560CA /* TimeViewController.swift */; };
 		CC5779BE2662827D00243429 /* LengthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC5779BD2662827D00243429 /* LengthViewController.swift */; };
 		CC5779CC2664468E00243429 /* Length.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC5779CB2664468E00243429 /* Length.swift */; };
 		CC5779D12664777200243429 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = CC5779D02664777200243429 /* README.md */; };
@@ -47,6 +49,8 @@
 		879480197E07C7045D68ED59 /* Pods-SI Converter-SI ConverterUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SI Converter-SI ConverterUITests.debug.xcconfig"; path = "Target Support Files/Pods-SI Converter-SI ConverterUITests/Pods-SI Converter-SI ConverterUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		A4A23EF430C9B695E4AF7B3D /* Pods-SI Converter.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SI Converter.release.xcconfig"; path = "Target Support Files/Pods-SI Converter/Pods-SI Converter.release.xcconfig"; sourceTree = "<group>"; };
 		C600186CDAE83C6F5F7167F7 /* Pods_SI_ConverterTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SI_ConverterTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CC1021EA2664F7D7004560CA /* Time.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Time.swift; sourceTree = "<group>"; };
+		CC1021EF2664F7EB004560CA /* TimeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeViewController.swift; sourceTree = "<group>"; };
 		CC5779BD2662827D00243429 /* LengthViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LengthViewController.swift; sourceTree = "<group>"; };
 		CC5779CB2664468E00243429 /* Length.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Length.swift; sourceTree = "<group>"; };
 		CC5779D02664777200243429 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
@@ -94,6 +98,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		CC1021E92664F7C4004560CA /* Time */ = {
+			isa = PBXGroup;
+			children = (
+				CC1021EA2664F7D7004560CA /* Time.swift */,
+				CC1021EF2664F7EB004560CA /* TimeViewController.swift */,
+			);
+			path = Time;
+			sourceTree = "<group>";
+		};
 		CC5779BC2662825500243429 /* Length */ = {
 			isa = PBXGroup;
 			children = (
@@ -129,6 +142,7 @@
 		CCBCA9122661C90900847642 /* SI Converter */ = {
 			isa = PBXGroup;
 			children = (
+				CC1021E92664F7C4004560CA /* Time */,
 				CC5779BC2662825500243429 /* Length */,
 				CCBCA9132661C90900847642 /* AppDelegate.swift */,
 				CCBCA9152661C90900847642 /* ViewController.swift */,
@@ -403,7 +417,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				CC5779BE2662827D00243429 /* LengthViewController.swift in Sources */,
+				CC1021F02664F7EB004560CA /* TimeViewController.swift in Sources */,
 				CC5779CC2664468E00243429 /* Length.swift in Sources */,
+				CC1021EB2664F7D7004560CA /* Time.swift in Sources */,
 				CCBCA9162661C90900847642 /* ViewController.swift in Sources */,
 				CCBCA9142661C90900847642 /* AppDelegate.swift in Sources */,
 			);
