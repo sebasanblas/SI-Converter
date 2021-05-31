@@ -39,11 +39,13 @@ class LengthViewController: NSViewController {
         inField.stringValue = "0"
     }
 
-    @IBAction func unitChanged(_ sender: NSPopUpButton) {
+    @IBAction func textFieldChange(_ sender: NSTextField) {
         var value = Double(inputField.stringValue as String)
-        switch sender.titleOfSelectedItem {
+        switch unitSelectedField.titleOfSelectedItem {
         case "km":
             value = convertAnyToBasic(unit: .kilometer)
+        case "m":
+            value = convertAnyToBasic(unit: .meter)
         case "cm":
             value = convertAnyToBasic(unit: .centimeter)
         case "mm":
@@ -61,9 +63,38 @@ class LengthViewController: NSViewController {
         case "in":
             value = convertAnyToBasic(unit: .inch)
         default:
-            print("no")
+            print("Error")
         }
-        convertAll(input: Double(value!))
+        convertAll(input: value ?? 0.0)
+    }
+
+    @IBAction func unitChanged(_ sender: NSPopUpButton) {
+        var value = Double(inputField.stringValue as String)
+        switch sender.titleOfSelectedItem {
+        case "km":
+            value = convertAnyToBasic(unit: .kilometer)
+        case "m":
+            value = convertAnyToBasic(unit: .meter)
+        case "cm":
+            value = convertAnyToBasic(unit: .centimeter)
+        case "mm":
+            value = convertAnyToBasic(unit: .milimeter)
+        case "µm":
+            value = convertAnyToBasic(unit: .micrometer)
+        case "nm":
+            value = convertAnyToBasic(unit: .nanometer)
+        case "mi":
+            value = convertAnyToBasic(unit: .mile)
+        case "yd":
+            value = convertAnyToBasic(unit: .yard)
+        case "ft":
+            value = convertAnyToBasic(unit: .feed)
+        case "in":
+            value = convertAnyToBasic(unit: .inch)
+        default:
+            print("Error")
+        }
+        convertAll(input: value ?? 0.0)
     }
 
     func convertAnyToBasic(unit: LengthUnit) -> Double {
