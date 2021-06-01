@@ -58,7 +58,7 @@ struct Length {
                 output = value / 1000
             }
         case .micrometer:
-            // 1 m -> 1000000 m
+            // 1 m -> 1000000 um
             switch inverter {
             case false:
                 output = value * 1000000
@@ -66,7 +66,7 @@ struct Length {
                 output = value / 1000000
             }
         case .nanometer:
-            // 1 m -> 1000000000
+            // 1 m -> 1000000000 nm
             switch inverter {
             case false:
                 output = value * 1000000000
