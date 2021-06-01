@@ -66,7 +66,8 @@ class TimeViewController: NSViewController {
         default:
             print("Error")
         }
-        convertAll(input: value ?? 0.0)    }
+        convertAll(input: value ?? 0.0)
+    }
 
     @IBAction func unitChanged(_ sender: NSPopUpButton) {
         var value = Double(inputField.stringValue as String)
