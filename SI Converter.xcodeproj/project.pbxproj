@@ -25,6 +25,8 @@
 		CCBCA9182661C90B00847642 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CCBCA9172661C90B00847642 /* Assets.xcassets */; };
 		CCBCA91B2661C90B00847642 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CCBCA9192661C90B00847642 /* Main.storyboard */; };
 		CCBCA9322661C90B00847642 /* SI_ConverterUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCBCA9312661C90B00847642 /* SI_ConverterUITests.swift */; };
+		CCCE0CF226670BDF006ACC05 /* Temperature.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCCE0CF126670BDF006ACC05 /* Temperature.swift */; };
+		CCCE0CFA2667A985006ACC05 /* TemperatureViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCCE0CF92667A985006ACC05 /* TemperatureViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -75,6 +77,8 @@
 		CCBCA92D2661C90B00847642 /* SI ConverterUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "SI ConverterUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CCBCA9312661C90B00847642 /* SI_ConverterUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SI_ConverterUITests.swift; sourceTree = "<group>"; };
 		CCBCA9332661C90B00847642 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CCCE0CF126670BDF006ACC05 /* Temperature.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Temperature.swift; sourceTree = "<group>"; };
+		CCCE0CF92667A985006ACC05 /* TemperatureViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TemperatureViewController.swift; sourceTree = "<group>"; };
 		DBCE8B6A701F7C941CB11D22 /* Pods-SI Converter.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SI Converter.debug.xcconfig"; path = "Target Support Files/Pods-SI Converter/Pods-SI Converter.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -168,6 +172,7 @@
 		CCBCA9122661C90900847642 /* SI Converter */ = {
 			isa = PBXGroup;
 			children = (
+				CCCE0CF026670BCB006ACC05 /* Temperature */,
 				CC10221426665BF3004560CA /* Electric current */,
 				CC1022062665C10E004560CA /* Amount of substance */,
 				CC1021E92664F7C4004560CA /* Time */,
@@ -198,6 +203,15 @@
 				CCBCA9332661C90B00847642 /* Info.plist */,
 			);
 			path = "SI ConverterUITests";
+			sourceTree = "<group>";
+		};
+		CCCE0CF026670BCB006ACC05 /* Temperature */ = {
+			isa = PBXGroup;
+			children = (
+				CCCE0CF126670BDF006ACC05 /* Temperature.swift */,
+				CCCE0CF92667A985006ACC05 /* TemperatureViewController.swift */,
+			);
+			path = Temperature;
 			sourceTree = "<group>";
 		};
 		D10CF478B9EFC1C491142BEE /* Frameworks */ = {
@@ -450,10 +464,12 @@
 				CC5779CC2664468E00243429 /* Length.swift in Sources */,
 				CC10221626665C09004560CA /* ElectricCurrent.swift in Sources */,
 				CC1021EB2664F7D7004560CA /* Time.swift in Sources */,
+				CCCE0CF226670BDF006ACC05 /* Temperature.swift in Sources */,
 				CCBCA9162661C90900847642 /* ViewController.swift in Sources */,
 				CC10221E26665C1D004560CA /* ElectricCurrentViewController.swift in Sources */,
 				CCBCA9142661C90900847642 /* AppDelegate.swift in Sources */,
 				CC1022082665C125004560CA /* AmountOfSubstance.swift in Sources */,
+				CCCE0CFA2667A985006ACC05 /* TemperatureViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

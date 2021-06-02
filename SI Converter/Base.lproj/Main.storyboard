@@ -711,6 +711,7 @@
                         <tabViewItem id="mlb-zp-Etq"/>
                         <tabViewItem id="aaK-yE-RNR"/>
                         <tabViewItem id="bYX-RV-EmW"/>
+                        <tabViewItem id="yJN-ik-KcZ"/>
                     </tabViewItems>
                     <tabView key="tabView" type="noTabsNoBorder" id="LHu-W4-Zj4">
                         <rect key="frame" x="0.0" y="0.0" width="754" height="479"/>
@@ -726,6 +727,7 @@
                         <segue destination="lVr-qn-nO0" kind="relationship" relationship="tabItems" id="c3r-OL-yFA"/>
                         <segue destination="7SR-wf-oaL" kind="relationship" relationship="tabItems" id="5Pf-pP-ySp"/>
                         <segue destination="rmd-uj-lGt" kind="relationship" relationship="tabItems" id="smA-CG-7xJ"/>
+                        <segue destination="t9O-cZ-y9C" kind="relationship" relationship="tabItems" id="0bD-sq-VPo"/>
                     </connections>
                 </tabViewController>
                 <customObject id="lSK-ef-G1w" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
@@ -1985,7 +1987,7 @@
                         <outlet property="aField" destination="Inu-ia-F93" id="WM1-Bh-gj7"/>
                         <outlet property="abampereField" destination="3ob-L7-Eh6" id="Iut-RM-UmW"/>
                         <outlet property="gaField" destination="ezh-CW-I2S" id="wdc-A2-a56"/>
-                        <outlet property="inputFiled" destination="Wav-HA-yY1" id="ZeM-xn-hwU"/>
+                        <outlet property="inputField" destination="Wav-HA-yY1" id="0EM-kz-3qL"/>
                         <outlet property="kafield" destination="Col-IR-Juh" id="Anx-tr-ThN"/>
                         <outlet property="maField" destination="aFE-zV-KgY" id="KAz-l2-Upg"/>
                         <outlet property="megaField" destination="GHj-ue-vaM" id="RYG-Vd-INq"/>
@@ -2001,7 +2003,7 @@
         <!--Temperature-->
         <scene sceneID="U7t-v4-P8E">
             <objects>
-                <viewController title="Temperature" id="t9O-cZ-y9C" customClass="AmountOfSubstanceViewController" customModule="SI_Converter" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Temperature" id="t9O-cZ-y9C" customClass="TemperatureViewController" customModule="SI_Converter" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" id="AMt-Qt-pvC">
                         <rect key="frame" x="0.0" y="0.0" width="450" height="235"/>
                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
@@ -2022,6 +2024,9 @@
                                     <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                                     <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
+                                <connections>
+                                    <action selector="textFieldChange:" target="t9O-cZ-y9C" id="bGv-ov-zCE"/>
+                                </connections>
                             </textField>
                             <popUpButton verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="cTR-mM-nKg">
                                 <rect key="frame" x="355" y="181" width="48" height="25"/>
@@ -2037,6 +2042,9 @@
                                         </items>
                                     </menu>
                                 </popUpButtonCell>
+                                <connections>
+                                    <action selector="unitChanged:" target="t9O-cZ-y9C" id="TgL-st-Dw0"/>
+                                </connections>
                             </popUpButton>
                             <box verticalHuggingPriority="750" boxType="separator" translatesAutoresizingMaskIntoConstraints="NO" id="O8s-Jc-C7l">
                                 <rect key="frame" x="0.0" y="151" width="450" height="5"/>
@@ -2171,6 +2179,14 @@
                             <constraint firstItem="cTR-mM-nKg" firstAttribute="top" secondItem="AMt-Qt-pvC" secondAttribute="top" constant="30" id="zAg-ew-ejz"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="celsiusField" destination="Cnf-nn-1w7" id="3UH-y6-vDi"/>
+                        <outlet property="fahrenheitField" destination="XFA-q5-Col" id="7Xr-Dj-D88"/>
+                        <outlet property="inputField" destination="Qln-Dg-jLd" id="cTC-G6-72d"/>
+                        <outlet property="kelvinField" destination="PhC-ER-Gen" id="H1B-Sa-kd0"/>
+                        <outlet property="rankineField" destination="NgZ-JK-942" id="tVT-mf-USm"/>
+                        <outlet property="unitSelectedField" destination="cTR-mM-nKg" id="zFv-6J-IJ8"/>
+                    </connections>
                 </viewController>
                 <customObject id="ian-12-2uL" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
