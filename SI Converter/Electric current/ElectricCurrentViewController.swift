@@ -11,7 +11,7 @@ class ElectricCurrentViewController: NSViewController {
 
     // MARK: - User
 
-    @IBOutlet var inputFiled: NSTextField!
+    @IBOutlet var inputField: NSTextField!
     @IBOutlet var unitSelectedField: NSPopUpButton!
     // MARK: - Output
 
@@ -37,24 +37,24 @@ class ElectricCurrentViewController: NSViewController {
     }
 
     @IBAction func textFieldChange(_ sender: NSTextField) {
-        var value = Double(inputFiled.stringValue as String)
+        var value = Double(inputField.stringValue as String)
         switch unitSelectedField.titleOfSelectedItem {
         case "GA":
-            value = converAnyToBasic(unit: .giga)
+            value = convertAnyToBasic(unit: .giga)
         case "MA":
-            value = converAnyToBasic(unit: .mega)
+            value = convertAnyToBasic(unit: .mega)
         case "kA":
-            value = converAnyToBasic(unit: .kilo)
+            value = convertAnyToBasic(unit: .kilo)
         case "A":
-            value = converAnyToBasic(unit: .ampere)
+            value = convertAnyToBasic(unit: .ampere)
         case "mA":
-            value = converAnyToBasic(unit: .milli)
+            value = convertAnyToBasic(unit: .milli)
         case "µA":
-            value = converAnyToBasic(unit: .micro)
+            value = convertAnyToBasic(unit: .micro)
         case "nA":
-            value = converAnyToBasic(unit: .nano)
+            value = convertAnyToBasic(unit: .nano)
         case "aA":
-            value = converAnyToBasic(unit: .abampere)
+            value = convertAnyToBasic(unit: .abampere)
         default:
             print("error")
         }
@@ -62,32 +62,32 @@ class ElectricCurrentViewController: NSViewController {
     }
 
     @IBAction func unitChanged(_ sender: NSPopUpButton) {
-        var value = Double(inputFiled.stringValue as String)
+        var value = Double(inputField.stringValue as String)
         switch unitSelectedField.titleOfSelectedItem {
         case "GA":
-            value = converAnyToBasic(unit: .giga)
+            value = convertAnyToBasic(unit: .giga)
         case "MA":
-            value = converAnyToBasic(unit: .mega)
+            value = convertAnyToBasic(unit: .mega)
         case "kA":
-            value = converAnyToBasic(unit: .kilo)
+            value = convertAnyToBasic(unit: .kilo)
         case "A":
-            value = converAnyToBasic(unit: .ampere)
+            value = convertAnyToBasic(unit: .ampere)
         case "mA":
-            value = converAnyToBasic(unit: .milli)
+            value = convertAnyToBasic(unit: .milli)
         case "µA":
-            value = converAnyToBasic(unit: .micro)
+            value = convertAnyToBasic(unit: .micro)
         case "nA":
-            value = converAnyToBasic(unit: .nano)
+            value = convertAnyToBasic(unit: .nano)
         case "aA":
-            value = converAnyToBasic(unit: .abampere)
+            value = convertAnyToBasic(unit: .abampere)
         default:
             print("error")
         }
         convertAll(input: value ?? 0.0)
     }
 
-    func converAnyToBasic(unit: ElectricUnit) -> Double {
-        let input = Double(inputFiled.doubleValue)
+    func convertAnyToBasic(unit: ElectricUnit) -> Double {
+        let input = Double(inputField.doubleValue)
         var output: Double
         let value = Electric(value: input)
         output = value.convert(unit: unit, true)
