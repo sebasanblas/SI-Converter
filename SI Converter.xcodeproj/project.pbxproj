@@ -27,6 +27,10 @@
 		CCBCA9322661C90B00847642 /* SI_ConverterUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCBCA9312661C90B00847642 /* SI_ConverterUITests.swift */; };
 		CCCE0CF226670BDF006ACC05 /* Temperature.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCCE0CF126670BDF006ACC05 /* Temperature.swift */; };
 		CCCE0CFA2667A985006ACC05 /* TemperatureViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCCE0CF92667A985006ACC05 /* TemperatureViewController.swift */; };
+		CCCE0D002667AF9D006ACC05 /* LuminousIntensity.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCCE0CFF2667AF9D006ACC05 /* LuminousIntensity.swift */; };
+		CCCE0D052667AFBA006ACC05 /* LuminousIntensityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCCE0D042667AFBA006ACC05 /* LuminousIntensityViewController.swift */; };
+		CCCE0D0B2667BAF1006ACC05 /* MassViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCCE0D0A2667BAF1006ACC05 /* MassViewController.swift */; };
+		CCCE0D102667BAFB006ACC05 /* Mass.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCCE0D0F2667BAFB006ACC05 /* Mass.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -79,6 +83,10 @@
 		CCBCA9332661C90B00847642 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CCCE0CF126670BDF006ACC05 /* Temperature.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Temperature.swift; sourceTree = "<group>"; };
 		CCCE0CF92667A985006ACC05 /* TemperatureViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TemperatureViewController.swift; sourceTree = "<group>"; };
+		CCCE0CFF2667AF9D006ACC05 /* LuminousIntensity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LuminousIntensity.swift; sourceTree = "<group>"; };
+		CCCE0D042667AFBA006ACC05 /* LuminousIntensityViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LuminousIntensityViewController.swift; sourceTree = "<group>"; };
+		CCCE0D0A2667BAF1006ACC05 /* MassViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MassViewController.swift; sourceTree = "<group>"; };
+		CCCE0D0F2667BAFB006ACC05 /* Mass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mass.swift; sourceTree = "<group>"; };
 		DBCE8B6A701F7C941CB11D22 /* Pods-SI Converter.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SI Converter.debug.xcconfig"; path = "Target Support Files/Pods-SI Converter/Pods-SI Converter.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -172,6 +180,8 @@
 		CCBCA9122661C90900847642 /* SI Converter */ = {
 			isa = PBXGroup;
 			children = (
+				CCCE0D092667BA12006ACC05 /* Mass */,
+				CCCE0CFE2667AF84006ACC05 /* Luminous intensity */,
 				CCCE0CF026670BCB006ACC05 /* Temperature */,
 				CC10221426665BF3004560CA /* Electric current */,
 				CC1022062665C10E004560CA /* Amount of substance */,
@@ -212,6 +222,24 @@
 				CCCE0CF92667A985006ACC05 /* TemperatureViewController.swift */,
 			);
 			path = Temperature;
+			sourceTree = "<group>";
+		};
+		CCCE0CFE2667AF84006ACC05 /* Luminous intensity */ = {
+			isa = PBXGroup;
+			children = (
+				CCCE0CFF2667AF9D006ACC05 /* LuminousIntensity.swift */,
+				CCCE0D042667AFBA006ACC05 /* LuminousIntensityViewController.swift */,
+			);
+			path = "Luminous intensity";
+			sourceTree = "<group>";
+		};
+		CCCE0D092667BA12006ACC05 /* Mass */ = {
+			isa = PBXGroup;
+			children = (
+				CCCE0D0A2667BAF1006ACC05 /* MassViewController.swift */,
+				CCCE0D0F2667BAFB006ACC05 /* Mass.swift */,
+			);
+			path = Mass;
 			sourceTree = "<group>";
 		};
 		D10CF478B9EFC1C491142BEE /* Frameworks */ = {
@@ -458,18 +486,22 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CCCE0D052667AFBA006ACC05 /* LuminousIntensityViewController.swift in Sources */,
 				CC1022102665C146004560CA /* AmountOfSubstanceViewController.swift in Sources */,
 				CC5779BE2662827D00243429 /* LengthViewController.swift in Sources */,
 				CC1021F02664F7EB004560CA /* TimeViewController.swift in Sources */,
 				CC5779CC2664468E00243429 /* Length.swift in Sources */,
+				CCCE0D0B2667BAF1006ACC05 /* MassViewController.swift in Sources */,
 				CC10221626665C09004560CA /* ElectricCurrent.swift in Sources */,
 				CC1021EB2664F7D7004560CA /* Time.swift in Sources */,
 				CCCE0CF226670BDF006ACC05 /* Temperature.swift in Sources */,
+				CCCE0D102667BAFB006ACC05 /* Mass.swift in Sources */,
 				CCBCA9162661C90900847642 /* ViewController.swift in Sources */,
 				CC10221E26665C1D004560CA /* ElectricCurrentViewController.swift in Sources */,
 				CCBCA9142661C90900847642 /* AppDelegate.swift in Sources */,
 				CC1022082665C125004560CA /* AmountOfSubstance.swift in Sources */,
 				CCCE0CFA2667A985006ACC05 /* TemperatureViewController.swift in Sources */,
+				CCCE0D002667AF9D006ACC05 /* LuminousIntensity.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
