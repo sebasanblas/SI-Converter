@@ -15,6 +15,8 @@
 		CC1021FF26656945004560CA /* LengthTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC1021FE26656945004560CA /* LengthTest.swift */; };
 		CC1022082665C125004560CA /* AmountOfSubstance.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC1022072665C125004560CA /* AmountOfSubstance.swift */; };
 		CC1022102665C146004560CA /* AmountOfSubstanceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC10220F2665C146004560CA /* AmountOfSubstanceViewController.swift */; };
+		CC10221626665C09004560CA /* ElectricCurrent.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC10221526665C09004560CA /* ElectricCurrent.swift */; };
+		CC10221E26665C1D004560CA /* ElectricCurrentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC10221D26665C1D004560CA /* ElectricCurrentViewController.swift */; };
 		CC5779BE2662827D00243429 /* LengthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC5779BD2662827D00243429 /* LengthViewController.swift */; };
 		CC5779CC2664468E00243429 /* Length.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC5779CB2664468E00243429 /* Length.swift */; };
 		CC5779D12664777200243429 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = CC5779D02664777200243429 /* README.md */; };
@@ -56,6 +58,8 @@
 		CC1021FE26656945004560CA /* LengthTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LengthTest.swift; sourceTree = "<group>"; };
 		CC1022072665C125004560CA /* AmountOfSubstance.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AmountOfSubstance.swift; sourceTree = "<group>"; };
 		CC10220F2665C146004560CA /* AmountOfSubstanceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AmountOfSubstanceViewController.swift; sourceTree = "<group>"; };
+		CC10221526665C09004560CA /* ElectricCurrent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ElectricCurrent.swift; sourceTree = "<group>"; };
+		CC10221D26665C1D004560CA /* ElectricCurrentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ElectricCurrentViewController.swift; sourceTree = "<group>"; };
 		CC5779BD2662827D00243429 /* LengthViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LengthViewController.swift; sourceTree = "<group>"; };
 		CC5779CB2664468E00243429 /* Length.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Length.swift; sourceTree = "<group>"; };
 		CC5779D02664777200243429 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
@@ -120,6 +124,15 @@
 			path = "Amount of substance";
 			sourceTree = "<group>";
 		};
+		CC10221426665BF3004560CA /* Electric current */ = {
+			isa = PBXGroup;
+			children = (
+				CC10221526665C09004560CA /* ElectricCurrent.swift */,
+				CC10221D26665C1D004560CA /* ElectricCurrentViewController.swift */,
+			);
+			path = "Electric current";
+			sourceTree = "<group>";
+		};
 		CC5779BC2662825500243429 /* Length */ = {
 			isa = PBXGroup;
 			children = (
@@ -155,6 +168,7 @@
 		CCBCA9122661C90900847642 /* SI Converter */ = {
 			isa = PBXGroup;
 			children = (
+				CC10221426665BF3004560CA /* Electric current */,
 				CC1022062665C10E004560CA /* Amount of substance */,
 				CC1021E92664F7C4004560CA /* Time */,
 				CC5779BC2662825500243429 /* Length */,
@@ -434,8 +448,10 @@
 				CC5779BE2662827D00243429 /* LengthViewController.swift in Sources */,
 				CC1021F02664F7EB004560CA /* TimeViewController.swift in Sources */,
 				CC5779CC2664468E00243429 /* Length.swift in Sources */,
+				CC10221626665C09004560CA /* ElectricCurrent.swift in Sources */,
 				CC1021EB2664F7D7004560CA /* Time.swift in Sources */,
 				CCBCA9162661C90900847642 /* ViewController.swift in Sources */,
+				CC10221E26665C1D004560CA /* ElectricCurrentViewController.swift in Sources */,
 				CCBCA9142661C90900847642 /* AppDelegate.swift in Sources */,
 				CC1022082665C125004560CA /* AmountOfSubstance.swift in Sources */,
 			);

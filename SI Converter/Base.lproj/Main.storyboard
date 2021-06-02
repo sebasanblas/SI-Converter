@@ -710,6 +710,7 @@
                         <tabViewItem id="ZkE-QI-XQY"/>
                         <tabViewItem id="mlb-zp-Etq"/>
                         <tabViewItem id="aaK-yE-RNR"/>
+                        <tabViewItem id="bYX-RV-EmW"/>
                     </tabViewItems>
                     <tabView key="tabView" type="noTabsNoBorder" id="LHu-W4-Zj4">
                         <rect key="frame" x="0.0" y="0.0" width="754" height="479"/>
@@ -724,6 +725,7 @@
                         <segue destination="nzO-BI-sO6" kind="relationship" relationship="tabItems" id="Sfz-as-zPa"/>
                         <segue destination="lVr-qn-nO0" kind="relationship" relationship="tabItems" id="c3r-OL-yFA"/>
                         <segue destination="7SR-wf-oaL" kind="relationship" relationship="tabItems" id="5Pf-pP-ySp"/>
+                        <segue destination="rmd-uj-lGt" kind="relationship" relationship="tabItems" id="smA-CG-7xJ"/>
                     </connections>
                 </tabViewController>
                 <customObject id="lSK-ef-G1w" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
@@ -1683,6 +1685,496 @@
                 <customObject id="gPk-pB-qRp" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1229" y="689.5"/>
+        </scene>
+        <!--Electric current-->
+        <scene sceneID="sdO-ye-AJg">
+            <objects>
+                <viewController title="Electric current" id="rmd-uj-lGt" customClass="ElectricCurrentViewController" customModule="SI_Converter" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" id="SCe-3c-UQz">
+                        <rect key="frame" x="0.0" y="0.0" width="450" height="351"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="l9E-ma-vhO">
+                                <rect key="frame" x="48" y="300" width="49" height="21"/>
+                                <textFieldCell key="cell" lineBreakMode="clipping" alignment="right" title="Value:" id="ddn-ht-EfA">
+                                    <font key="font" metaFont="system" size="16"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <textField verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Wav-HA-yY1">
+                                <rect key="frame" x="125" y="300" width="192" height="21"/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" drawsBackground="YES" id="hFi-gU-kil">
+                                    <numberFormatter key="formatter" formatterBehavior="default10_4" numberStyle="decimal" formatWidth="-1" minimumIntegerDigits="1" maximumIntegerDigits="2000000000" maximumFractionDigits="3" id="Nd5-OK-CnA"/>
+                                    <font key="font" metaFont="system"/>
+                                    <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                                <connections>
+                                    <action selector="textFieldChange:" target="rmd-uj-lGt" id="r7F-7I-iLu"/>
+                                </connections>
+                            </textField>
+                            <popUpButton verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Zjh-cx-Hiz">
+                                <rect key="frame" x="345" y="297" width="58" height="25"/>
+                                <popUpButtonCell key="cell" type="push" title="GA" bezelStyle="rounded" alignment="left" lineBreakMode="truncatingTail" state="on" borderStyle="borderAndBezel" imageScaling="proportionallyDown" inset="2" selectedItem="Tz9-JW-5KG" id="2u7-se-46z">
+                                    <behavior key="behavior" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="menu"/>
+                                    <menu key="menu" id="hJZ-c4-48g">
+                                        <items>
+                                            <menuItem title="GA" state="on" id="Tz9-JW-5KG"/>
+                                            <menuItem title="MA" id="pTg-eT-lx2"/>
+                                            <menuItem title="kA" id="NeF-za-STk"/>
+                                            <menuItem title="A" id="zRQ-hk-fgc"/>
+                                            <menuItem title="mA" id="S1c-Ta-fqG"/>
+                                            <menuItem title="µA" id="gYK-Ez-AyE"/>
+                                            <menuItem title="nA" id="wMY-Ht-8xc"/>
+                                            <menuItem title="aA" id="Nra-nS-A0v"/>
+                                        </items>
+                                    </menu>
+                                </popUpButtonCell>
+                                <connections>
+                                    <action selector="unitChanged:" target="rmd-uj-lGt" id="mS1-g4-fPS"/>
+                                </connections>
+                            </popUpButton>
+                            <box verticalHuggingPriority="750" boxType="separator" translatesAutoresizingMaskIntoConstraints="NO" id="0hm-Wv-quX">
+                                <rect key="frame" x="0.0" y="267" width="450" height="5"/>
+                            </box>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="rdA-sG-PdX">
+                                <rect key="frame" x="82" y="226" width="84" height="16"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <textFieldCell key="cell" lineBreakMode="clipping" title="Gigaampere" id="Dmo-Wx-o0U">
+                                    <font key="font" metaFont="system"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4gq-GR-EWK">
+                                <rect key="frame" x="375" y="226" width="23" height="16"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <textFieldCell key="cell" lineBreakMode="clipping" title="GA" id="bCJ-u8-5z6">
+                                    <font key="font" metaFont="system"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <textField verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ezh-CW-I2S">
+                                <rect key="frame" x="174" y="223" width="185" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" alignment="right" drawsBackground="YES" id="OgF-qH-mkC">
+                                    <numberFormatter key="formatter" formatterBehavior="default10_4" numberStyle="decimal" formatWidth="-1" minimumIntegerDigits="1" maximumIntegerDigits="2000000000" maximumFractionDigits="3" id="e9x-e2-0C2"/>
+                                    <font key="font" metaFont="system"/>
+                                    <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="K6q-ug-IMa">
+                                <rect key="frame" x="82" y="197" width="84" height="16"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <textFieldCell key="cell" lineBreakMode="clipping" title="Megaampere" id="lJY-zS-9eN">
+                                    <font key="font" metaFont="system"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="q43-9R-YB6">
+                                <rect key="frame" x="375" y="197" width="24" height="16"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <textFieldCell key="cell" lineBreakMode="clipping" title="MA" id="dHI-nJ-jW2">
+                                    <font key="font" metaFont="system"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <textField verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="GHj-ue-vaM">
+                                <rect key="frame" x="174" y="194" width="185" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" alignment="right" drawsBackground="YES" id="sjx-xo-CDl">
+                                    <numberFormatter key="formatter" formatterBehavior="default10_4" numberStyle="decimal" formatWidth="-1" minimumIntegerDigits="1" maximumIntegerDigits="2000000000" maximumFractionDigits="3" id="8pe-LQ-WOO"/>
+                                    <font key="font" metaFont="system"/>
+                                    <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="SwG-co-AFL">
+                                <rect key="frame" x="82" y="168" width="72" height="16"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <textFieldCell key="cell" lineBreakMode="clipping" title="Kiloampere" id="aec-fa-3ri">
+                                    <font key="font" metaFont="system"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="02H-wh-39K">
+                                <rect key="frame" x="375" y="168" width="20" height="16"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <textFieldCell key="cell" lineBreakMode="clipping" title="kA" id="vCp-Mb-FK4">
+                                    <font key="font" metaFont="system"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <textField verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Col-IR-Juh">
+                                <rect key="frame" x="174" y="165" width="185" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" alignment="right" drawsBackground="YES" id="rbJ-Mm-2Ml">
+                                    <numberFormatter key="formatter" formatterBehavior="default10_4" numberStyle="decimal" formatWidth="-1" minimumIntegerDigits="1" maximumIntegerDigits="2000000000" maximumFractionDigits="3" id="1E6-K3-iwl"/>
+                                    <font key="font" metaFont="system"/>
+                                    <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cAD-17-lY3">
+                                <rect key="frame" x="82" y="139" width="52" height="16"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <textFieldCell key="cell" lineBreakMode="clipping" title="Ampere" id="Igk-L0-VWw">
+                                    <font key="font" metaFont="system"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fGT-Hs-W9g">
+                                <rect key="frame" x="375" y="139" width="49" height="16"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <textFieldCell key="cell" lineBreakMode="clipping" title="A" id="Y0c-cC-ahJ">
+                                    <font key="font" metaFont="system"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <textField verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Inu-ia-F93">
+                                <rect key="frame" x="174" y="136" width="185" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" alignment="right" drawsBackground="YES" id="26b-WP-aGu">
+                                    <numberFormatter key="formatter" formatterBehavior="default10_4" numberStyle="decimal" formatWidth="-1" minimumIntegerDigits="1" maximumIntegerDigits="2000000000" maximumFractionDigits="3" id="odX-Pe-1X0"/>
+                                    <font key="font" metaFont="system"/>
+                                    <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="C6w-Fz-YyD">
+                                <rect key="frame" x="82" y="110" width="61" height="16"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <textFieldCell key="cell" lineBreakMode="clipping" title="Milliampere" id="cS2-M2-1BY">
+                                    <font key="font" metaFont="system"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0z8-yK-eED">
+                                <rect key="frame" x="375" y="110" width="24" height="16"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <textFieldCell key="cell" lineBreakMode="clipping" title="mA" id="mIz-fD-poa">
+                                    <font key="font" metaFont="system"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <textField verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="aFE-zV-KgY">
+                                <rect key="frame" x="174" y="107" width="185" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" alignment="right" drawsBackground="YES" id="KpJ-Mv-fv9">
+                                    <numberFormatter key="formatter" formatterBehavior="default10_4" numberStyle="decimal" formatWidth="-1" minimumIntegerDigits="1" maximumIntegerDigits="2000000000" maximumFractionDigits="3" id="XCP-UP-RMa"/>
+                                    <font key="font" metaFont="system"/>
+                                    <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="p40-Yh-eMa">
+                                <rect key="frame" x="82" y="81" width="84" height="16"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <textFieldCell key="cell" lineBreakMode="clipping" title="Microampere" id="EqI-WF-a2c">
+                                    <font key="font" metaFont="system"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="oLn-Lf-SNa">
+                                <rect key="frame" x="375" y="81" width="21" height="16"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <textFieldCell key="cell" lineBreakMode="clipping" title="µA" id="8xx-Kh-qlp">
+                                    <font key="font" metaFont="system"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <textField verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="rQ0-sF-Ng4">
+                                <rect key="frame" x="174" y="78" width="185" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" alignment="right" drawsBackground="YES" id="js4-ga-i0f">
+                                    <numberFormatter key="formatter" formatterBehavior="default10_4" numberStyle="decimal" formatWidth="-1" minimumIntegerDigits="1" maximumIntegerDigits="2000000000" maximumFractionDigits="3" id="Gby-g2-hDz"/>
+                                    <font key="font" metaFont="system"/>
+                                    <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gXB-RC-xQf">
+                                <rect key="frame" x="82" y="52" width="82" height="16"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <textFieldCell key="cell" lineBreakMode="clipping" title="Nanoampere" id="ZQH-Ff-bDa">
+                                    <font key="font" metaFont="system"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="o0g-gj-3tZ">
+                                <rect key="frame" x="375" y="52" width="21" height="16"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <textFieldCell key="cell" lineBreakMode="clipping" title="nA" id="169-NU-4ss">
+                                    <font key="font" metaFont="system"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <textField verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="1oh-aa-ahm">
+                                <rect key="frame" x="174" y="49" width="185" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" alignment="right" drawsBackground="YES" id="xmL-hg-nbv">
+                                    <numberFormatter key="formatter" formatterBehavior="default10_4" numberStyle="decimal" formatWidth="-1" minimumIntegerDigits="1" maximumIntegerDigits="2000000000" maximumFractionDigits="3" id="OVe-Gh-jbb"/>
+                                    <font key="font" metaFont="system"/>
+                                    <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="z3G-Vk-4XP">
+                                <rect key="frame" x="82" y="23" width="67" height="16"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <textFieldCell key="cell" lineBreakMode="clipping" title="Abampere" id="B92-oh-6X4">
+                                    <font key="font" metaFont="system"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="5Ds-kx-yg6">
+                                <rect key="frame" x="375" y="23" width="49" height="16"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <textFieldCell key="cell" lineBreakMode="clipping" title="aA" id="5FU-Fu-vQz">
+                                    <font key="font" metaFont="system"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <textField verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="3ob-L7-Eh6">
+                                <rect key="frame" x="174" y="20" width="185" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" alignment="right" drawsBackground="YES" id="0bP-e2-WZB">
+                                    <numberFormatter key="formatter" formatterBehavior="default10_4" numberStyle="decimal" formatWidth="-1" minimumIntegerDigits="1" maximumIntegerDigits="2000000000" maximumFractionDigits="3" id="mfJ-5K-1Dg"/>
+                                    <font key="font" metaFont="system"/>
+                                    <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="0hm-Wv-quX" firstAttribute="top" secondItem="l9E-ma-vhO" secondAttribute="bottom" constant="30" id="2Ih-AX-ZKt"/>
+                            <constraint firstAttribute="trailing" secondItem="Zjh-cx-Hiz" secondAttribute="trailing" constant="50" id="2LT-8X-2D9"/>
+                            <constraint firstItem="0hm-Wv-quX" firstAttribute="top" secondItem="Wav-HA-yY1" secondAttribute="bottom" constant="30" id="2Q5-kx-WMC"/>
+                            <constraint firstItem="0hm-Wv-quX" firstAttribute="leading" secondItem="SCe-3c-UQz" secondAttribute="leading" id="32u-g5-KZt"/>
+                            <constraint firstItem="Zjh-cx-Hiz" firstAttribute="top" secondItem="SCe-3c-UQz" secondAttribute="top" constant="30" id="3BE-yP-mZC"/>
+                            <constraint firstAttribute="bottom" secondItem="0hm-Wv-quX" secondAttribute="bottom" constant="269" id="H2K-vC-tG1"/>
+                            <constraint firstItem="Wav-HA-yY1" firstAttribute="leading" secondItem="l9E-ma-vhO" secondAttribute="trailing" constant="30" id="Jxk-Rf-ODO"/>
+                            <constraint firstItem="Zjh-cx-Hiz" firstAttribute="leading" secondItem="Wav-HA-yY1" secondAttribute="trailing" constant="30" id="LpU-gK-vNm"/>
+                            <constraint firstItem="l9E-ma-vhO" firstAttribute="top" secondItem="SCe-3c-UQz" secondAttribute="top" constant="30" id="Omu-ya-hxD"/>
+                            <constraint firstItem="Wav-HA-yY1" firstAttribute="top" secondItem="SCe-3c-UQz" secondAttribute="top" constant="30" id="UIx-wa-9Ky"/>
+                            <constraint firstItem="0hm-Wv-quX" firstAttribute="top" secondItem="Zjh-cx-Hiz" secondAttribute="bottom" constant="30" id="rWM-1E-DdH"/>
+                            <constraint firstAttribute="trailing" secondItem="0hm-Wv-quX" secondAttribute="trailing" id="tdw-z6-LtD"/>
+                            <constraint firstItem="l9E-ma-vhO" firstAttribute="leading" secondItem="SCe-3c-UQz" secondAttribute="leading" constant="50" id="yd5-ZU-nqM"/>
+                            <constraint firstItem="0hm-Wv-quX" firstAttribute="top" secondItem="SCe-3c-UQz" secondAttribute="top" constant="81" id="ytw-PU-WBi"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="aField" destination="Inu-ia-F93" id="WM1-Bh-gj7"/>
+                        <outlet property="abampereField" destination="3ob-L7-Eh6" id="Iut-RM-UmW"/>
+                        <outlet property="gaField" destination="ezh-CW-I2S" id="wdc-A2-a56"/>
+                        <outlet property="inputFiled" destination="Wav-HA-yY1" id="ZeM-xn-hwU"/>
+                        <outlet property="kafield" destination="Col-IR-Juh" id="Anx-tr-ThN"/>
+                        <outlet property="maField" destination="aFE-zV-KgY" id="KAz-l2-Upg"/>
+                        <outlet property="megaField" destination="GHj-ue-vaM" id="RYG-Vd-INq"/>
+                        <outlet property="microField" destination="rQ0-sF-Ng4" id="laR-9K-1w9"/>
+                        <outlet property="nanoField" destination="1oh-aa-ahm" id="jBo-Pi-mim"/>
+                        <outlet property="unitSelectedField" destination="Zjh-cx-Hiz" id="fXc-eU-WBJ"/>
+                    </connections>
+                </viewController>
+                <customObject id="dsB-QO-F6j" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1722" y="747.5"/>
+        </scene>
+        <!--Temperature-->
+        <scene sceneID="U7t-v4-P8E">
+            <objects>
+                <viewController title="Temperature" id="t9O-cZ-y9C" customClass="AmountOfSubstanceViewController" customModule="SI_Converter" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" id="AMt-Qt-pvC">
+                        <rect key="frame" x="0.0" y="0.0" width="450" height="235"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="usE-U9-pEh">
+                                <rect key="frame" x="48" y="184" width="49" height="21"/>
+                                <textFieldCell key="cell" lineBreakMode="clipping" alignment="right" title="Value:" id="CIW-Q5-kWV">
+                                    <font key="font" metaFont="system" size="16"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <textField verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Qln-Dg-jLd">
+                                <rect key="frame" x="125" y="184" width="202" height="21"/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" drawsBackground="YES" id="Aom-Tj-TwB">
+                                    <numberFormatter key="formatter" formatterBehavior="default10_4" numberStyle="decimal" formatWidth="-1" minimumIntegerDigits="1" maximumIntegerDigits="2000000000" maximumFractionDigits="3" id="7sn-Rv-mXP"/>
+                                    <font key="font" metaFont="system"/>
+                                    <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <popUpButton verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="cTR-mM-nKg">
+                                <rect key="frame" x="355" y="181" width="48" height="25"/>
+                                <popUpButtonCell key="cell" type="push" title="K" bezelStyle="rounded" alignment="left" lineBreakMode="truncatingTail" state="on" borderStyle="borderAndBezel" imageScaling="proportionallyDown" inset="2" selectedItem="VCw-92-z2Z" id="cBw-dr-Zf9">
+                                    <behavior key="behavior" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="menu"/>
+                                    <menu key="menu" id="ykw-tm-Nrz">
+                                        <items>
+                                            <menuItem title="K" state="on" id="VCw-92-z2Z"/>
+                                            <menuItem title="C" id="pLy-9K-adV"/>
+                                            <menuItem title="F" id="rZf-Ua-q5k"/>
+                                            <menuItem title="R" id="dtj-GJ-ZDM"/>
+                                        </items>
+                                    </menu>
+                                </popUpButtonCell>
+                            </popUpButton>
+                            <box verticalHuggingPriority="750" boxType="separator" translatesAutoresizingMaskIntoConstraints="NO" id="O8s-Jc-C7l">
+                                <rect key="frame" x="0.0" y="151" width="450" height="5"/>
+                            </box>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ASg-id-FXa">
+                                <rect key="frame" x="82" y="110" width="61" height="16"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <textFieldCell key="cell" lineBreakMode="clipping" title="Kelvin" id="N6l-tM-Bfc">
+                                    <font key="font" metaFont="system"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="wMH-Rg-gwW">
+                                <rect key="frame" x="375" y="110" width="13" height="16"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <textFieldCell key="cell" lineBreakMode="clipping" title="K" id="Zcr-dB-HDC">
+                                    <font key="font" metaFont="system"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <textField verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="PhC-ER-Gen">
+                                <rect key="frame" x="174" y="107" width="185" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" alignment="right" drawsBackground="YES" id="qOR-bm-QGW">
+                                    <numberFormatter key="formatter" formatterBehavior="default10_4" numberStyle="decimal" formatWidth="-1" minimumIntegerDigits="1" maximumIntegerDigits="2000000000" maximumFractionDigits="3" id="dp2-jf-f0q"/>
+                                    <font key="font" metaFont="system"/>
+                                    <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="6cj-hS-6Gt">
+                                <rect key="frame" x="82" y="81" width="48" height="16"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <textFieldCell key="cell" lineBreakMode="clipping" title="Celsius" id="hCT-6A-Rmd">
+                                    <font key="font" metaFont="system"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="vP9-fm-539">
+                                <rect key="frame" x="375" y="81" width="14" height="16"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <textFieldCell key="cell" lineBreakMode="clipping" title="C" id="Y3d-kx-Ki1">
+                                    <font key="font" metaFont="system"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <textField verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Cnf-nn-1w7">
+                                <rect key="frame" x="174" y="78" width="185" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" alignment="right" drawsBackground="YES" id="WLO-Df-2b9">
+                                    <numberFormatter key="formatter" formatterBehavior="default10_4" numberStyle="decimal" formatWidth="-1" minimumIntegerDigits="1" maximumIntegerDigits="2000000000" maximumFractionDigits="3" id="05T-zd-iVU"/>
+                                    <font key="font" metaFont="system"/>
+                                    <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2Qf-d7-DzA">
+                                <rect key="frame" x="82" y="52" width="68" height="16"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <textFieldCell key="cell" lineBreakMode="clipping" title="Fahrenheit" id="5Zd-oH-MtR">
+                                    <font key="font" metaFont="system"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="zaW-ZZ-oc1">
+                                <rect key="frame" x="375" y="52" width="12" height="16"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <textFieldCell key="cell" lineBreakMode="clipping" title="F" id="3f8-G6-2FG">
+                                    <font key="font" metaFont="system"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <textField verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="XFA-q5-Col">
+                                <rect key="frame" x="174" y="49" width="185" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" alignment="right" drawsBackground="YES" id="2zT-qC-nZr">
+                                    <numberFormatter key="formatter" formatterBehavior="default10_4" numberStyle="decimal" formatWidth="-1" minimumIntegerDigits="1" maximumIntegerDigits="2000000000" maximumFractionDigits="3" id="5YE-Wh-8x8"/>
+                                    <font key="font" metaFont="system"/>
+                                    <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="1oD-av-q3R">
+                                <rect key="frame" x="82" y="23" width="52" height="16"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <textFieldCell key="cell" lineBreakMode="clipping" title="Rankine" id="M95-8Z-mrF">
+                                    <font key="font" metaFont="system"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bhA-Cb-mDq">
+                                <rect key="frame" x="375" y="23" width="49" height="16"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <textFieldCell key="cell" lineBreakMode="clipping" title="R" id="U26-ZB-Ozm">
+                                    <font key="font" metaFont="system"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <textField verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="NgZ-JK-942">
+                                <rect key="frame" x="174" y="20" width="185" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" alignment="right" drawsBackground="YES" id="kyl-jw-SVf">
+                                    <numberFormatter key="formatter" formatterBehavior="default10_4" numberStyle="decimal" formatWidth="-1" minimumIntegerDigits="1" maximumIntegerDigits="2000000000" maximumFractionDigits="3" id="C8h-S4-opF"/>
+                                    <font key="font" metaFont="system"/>
+                                    <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="usE-U9-pEh" firstAttribute="leading" secondItem="AMt-Qt-pvC" secondAttribute="leading" constant="50" id="2G3-Yt-S63"/>
+                            <constraint firstItem="O8s-Jc-C7l" firstAttribute="top" secondItem="usE-U9-pEh" secondAttribute="bottom" constant="30" id="2i6-Yn-4R3"/>
+                            <constraint firstAttribute="trailing" secondItem="cTR-mM-nKg" secondAttribute="trailing" constant="50" id="8O8-MY-7QH"/>
+                            <constraint firstAttribute="bottom" secondItem="O8s-Jc-C7l" secondAttribute="bottom" constant="153" id="CHE-Sh-qzb"/>
+                            <constraint firstItem="O8s-Jc-C7l" firstAttribute="top" secondItem="Qln-Dg-jLd" secondAttribute="bottom" constant="30" id="Eeb-h5-2cX"/>
+                            <constraint firstItem="usE-U9-pEh" firstAttribute="top" secondItem="AMt-Qt-pvC" secondAttribute="top" constant="30" id="FYQ-VQ-YNu"/>
+                            <constraint firstItem="O8s-Jc-C7l" firstAttribute="top" secondItem="AMt-Qt-pvC" secondAttribute="top" constant="81" id="HxS-6L-bba"/>
+                            <constraint firstAttribute="trailing" secondItem="O8s-Jc-C7l" secondAttribute="trailing" id="UEF-2h-Drf"/>
+                            <constraint firstItem="O8s-Jc-C7l" firstAttribute="top" secondItem="cTR-mM-nKg" secondAttribute="bottom" constant="30" id="Xod-T9-qLg"/>
+                            <constraint firstItem="Qln-Dg-jLd" firstAttribute="leading" secondItem="usE-U9-pEh" secondAttribute="trailing" constant="30" id="eyG-Ve-jWY"/>
+                            <constraint firstItem="O8s-Jc-C7l" firstAttribute="leading" secondItem="AMt-Qt-pvC" secondAttribute="leading" id="fam-Ke-lob"/>
+                            <constraint firstItem="cTR-mM-nKg" firstAttribute="leading" secondItem="Qln-Dg-jLd" secondAttribute="trailing" constant="30" id="jjT-H8-3IB"/>
+                            <constraint firstItem="Qln-Dg-jLd" firstAttribute="top" secondItem="AMt-Qt-pvC" secondAttribute="top" constant="30" id="mSv-uH-07x"/>
+                            <constraint firstItem="cTR-mM-nKg" firstAttribute="top" secondItem="AMt-Qt-pvC" secondAttribute="top" constant="30" id="zAg-ew-ejz"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <customObject id="ian-12-2uL" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1229" y="983"/>
         </scene>
     </scenes>
 </document>
