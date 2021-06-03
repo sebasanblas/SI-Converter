@@ -15,7 +15,6 @@ class LuminousIntensityViewController: NSViewController {
     @IBOutlet var unitSelectedField: NSPopUpButton!
     // MARK: - Output
 
-    
     @IBOutlet var candelaField: NSTextField!
     @IBOutlet var lumenField: NSTextField!
     @IBOutlet var hefnerkerzeField: NSTextField!
@@ -41,7 +40,7 @@ class LuminousIntensityViewController: NSViewController {
         }
         convertAll(input: value ?? 0.0)
     }
-    
+
     @IBAction func unitChanged(_ sender: NSPopUpButton) {
         var value = Double(inputField.stringValue as String)
         switch unitSelectedField.titleOfSelectedItem {
